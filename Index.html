@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kaviarasu K — Video Editor Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <header id="header">
+      <div class="brand">
+        <div class="logo">
+          <img id="logoImg" src="C:\Users\KAVI\Downloads\Adobe Express - file.png" alt="Logo">
+        </div>
+        <div>
+          <div style="font-weight:700">Kaviarasu K</div>
+          <div style="font-size:14px;color:var(--muted)">Video Editor</div>
+        </div>
+      </div>
+
+      <!-- Logo Overlay -->
+      <div id="logoOverlay">
+        <div class="overlay-content">
+          <img id="overlayImg" src="" alt="Logo Enlarged">
+        </div>
+      </div>
+
+      <nav class="desktop-nav">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="mobile-menu-btn" id="menuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Creative Video Editor</h1>
+      <p>I bring stories to life through expert video editing, color grading, sound design, and motion graphics. Every project is an opportunity to blend creativity and technical skill, transforming raw footage into polished, engaging, and memorable experiences.</p>
+      <a href="#projects" class="btn-primary">View My Work <i class="fas fa-arrow-down"></i></a>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects">
+
+        <!-- Project 1 -->
+        <div class="project">
+          <div class="video-thumbnail" data-video="https://drive.google.com/file/d/1FBhawldDPjsvzzUU3x4gfFWkMe8di-OB/preview">
+            <img src="assert\wednesday.png" alt="Match Cuts Thumbnail">
+            <div class="play-button"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="info">
+            <h3><i class="fas fa-film"></i> Match Cuts</h3>
+            <p>Color grading, cuts, and sound design for short.</p>
+            <div class="project-tags">
+              <span class="project-tag">Adobe After Effects</span>
+              <span class="project-tag">Color Grading</span>
+              <span class="project-tag">Sound Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+          <div class="video-thumbnail" data-video="https://drive.google.com/file/d/1S3eqwdGUhC3ly_kBEgO6CXwuwohJB-MN/preview">
+            <img src="assert\alec.png" alt="Alec Product Video Thumbnail">
+            <div class="play-button"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="info">
+            <h3><i class="fas fa-city"></i> Alec Product Video</h3>
+            <p>Stabilization, speed ramps, and dynamic transitions.</p>
+            <div class="project-tags">
+              <span class="project-tag">After Effects</span>
+              <span class="project-tag">Storytelling</span>
+              <span class="project-tag">Animation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project">
+          <div class="video-thumbnail" data-video="https://drive.google.com/file/d/1JsDbt-7vOqPLRCR8qNlWLrWxp4HeIANA/preview">
+            <img src="assert\stanger_thing.png" alt="Stranger Thing Title Thumbnail">
+            <div class="play-button"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="info">
+            <h3><i class="fas fa-bullhorn"></i> Stranger Thing Title</h3>
+            <p>3D, effects, and SFX integration.</p>
+            <div class="project-tags">
+              <span class="project-tag">Motion Graphics</span>
+              <span class="project-tag">SFX</span>
+              <span class="project-tag">Visual Effects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="video-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe id="video-frame" src="" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- More Videos Section -->
+    <div class="more-videos">
+      <div class="more-projects" id="moreProjects">
+        <div class="projects">
+
+          <!-- Project 1 -->
+          <div class="project">
+            <div class="video-thumbnail" data-video="https://drive.google.com/file/d/1DJ4wlM2Qi3cTQICqUPeDpHfsbnQ2s4YU/preview">
+              <img src="assert\anthropic.png" alt="Match Cuts Thumbnail">
+              <div class="play-button"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+              <h3><i class="fas fa-film"></i> Product video</h3>
+              <p>Color grading, cuts, and sound design for short.</p>
+              <div class="project-tags">
+                <span class="project-tag">Adobe After Effects</span>
+                <span class="project-tag">Color Grading</span>
+                <span class="project-tag">Motion graphics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project">
+            <div class="video-thumbnail" data-video="https://drive.google.com/file/d/1S3eqwdGUhC3ly_kBEgO6CXwuwohJB-MN/preview">
+              <img src="assert\alec.png" alt="Alec Product Video Thumbnail">
+              <div class="play-button"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+              <h3><i class="fas fa-city"></i> Alec Product Video</h3>
+              <p>Stabilization, speed ramps, and dynamic transitions.</p>
+              <div class="project-tags">
+                <span class="project-tag">After Effects</span>
+                <span class="project-tag">Storytelling</span>
+                <span class="project-tag">Animation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project">
+            <div class="video-thumbnail" data-video="https://drive.google.com/file/d/1JsDbt-7vOqPLRCR8qNlWLrWxp4HeIANA/preview">
+              <img src="assert\stanger_thing.png" alt="Stranger Thing Title Thumbnail">
+              <div class="play-button"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+              <h3><i class="fas fa-bullhorn"></i> Stranger Thing Title</h3>
+              <p>3D, effects, and SFX integration.</p>
+              <div class="project-tags">
+                <span class="project-tag">Motion Graphics</span>
+                <span class="project-tag">SFX</span>
+                <span class="project-tag">Visual Effects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section>
+        <button class="more-videos-btn" id="moreVideosBtn">
+          Show More Videos <i class="fas fa-chevron-down"></i>
+        </button>
+      </section>
+    </div>
+
+    <!-- Video Comparison Section -->
+    <section class="comparison-section">
+      <h2>Video Comparison</h2><br><br>
+      <p class="comparison-description">
+        This section shows a side-by-side comparison of the original raw footage and the final edited video.
+      </p>
+    </section>
+
+    <!-- Before-After Video Slider Section -->
+    <section>
+      <div class="before-after-slider" id="videoSlider">
+        <div class="before">
+          <video src="assert/final_wednesday.mov" autoplay muted loop playsinline></video>
+        </div>
+        <div class="after" id="afterContainer">
+          <video src="assert\Timeline_wednesday.mov" autoplay muted loop playsinline></video>
+        </div>
+
+        <span class="label label-before">Before</span>
+        <span class="label label-after">After</span>
+
+        <div class="slider-handle" id="handle">
+          <div class="handle-line"></div>
+          <div class="handle-circle"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio1">
+      <h2>My Work</h2>
+      <br><br>
+
+      <!-- Filter Buttons -->
+      <div class="filter-labels1">
+        <span class="filter-label active" data-filter="all">All</span>
+        <span class="filter-label" data-filter="editing">Editing</span>
+        <span class="filter-label" data-filter="vfx">VFX</span>
+        <span class="filter-label" data-filter="color">Motion graphics</span>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid">
+        <div class="portfolio-item editing">
+          <img src="assert\vfx2.png" alt="Editing Work">
+          <p>Editing Project 1</p>
+        </div>
+        <div class="portfolio-item vfx">
+          <img src="assert\vfx3.png" alt="VFX Work">
+          <p>VFX Shot 1</p>
+        </div>
+        <div class="portfolio-item color">
+          <img src="assert/project3.jpg" alt="Color Grading">
+          <p>Color Grading Sample</p>
+        </div>
+        <div class="portfolio-item editing">
+          <img src="assert/vfx1.png" alt="Editing Work">
+          <p>Editing Project 2</p>
+        </div>
+        <div class="portfolio-item vfx">
+          <img src="assert\vfx4.png" alt="VFX Work">
+          <p>VFX Shot 2</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="about">I am Kaviarasu K, a passionate video editor specializing in Adobe Premiere Pro and After Effects. With a blend of creativity and technical expertise, I transform raw footage into compelling, cinematic stories that engage and captivate audiences.</p>
+
+      <h3 style="margin-top: 30px; text-align: center;">My Journey</h3><br>
+      <p class="about">My editing journey began during my diploma, where I discovered how much impact visual storytelling can have. Over time, I worked on short films, product teasers, and creative YouTube content. Alongside editing, I also gained experience in sound design and motion graphics. Currently, I am studying B.Tech CSE, which allows me to merge my love for technology with creative video editing.</p>
+
+      <h3 style="margin-top: 30px; text-align: center;">Vision</h3><br>
+      <p class="about">My vision is to create cutting-edge video content that blends cinematic storytelling with innovative editing techniques. I focus on leveraging AI, automation, and real-time tools to deliver immersive and engaging experiences for audiences across platforms.</p>
+      <section>
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-number" id="projectCount">50+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="clientCount">5+</div>
+            <div class="stat-label">Tools Mastered</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="experienceCount">1+</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3 style="margin-top: 50px; text-align: center;">Skills & Tools</h3>
+        <div class="skills">
+          <div class="chip"><i class="fas fa-desktop"></i> Premiere Pro</div>
+          <div class="chip"><i class="fas fa-magic"></i> After Effects</div>
+          <div class="chip"><i class="fas fa-film"></i> Davinci reslove studio</div>
+          <div class="chip"><i class="fas fa-volume-up"></i> Sound Design</div>
+          <div class="chip"><i class="fas fa-paint-brush"></i> Motion Graphics</div>
+          <div class="chip"><i class="fas fa-video"></i> 3d</div>
+          <div class="chip"><i class="fas fa-code"></i>2D animation</div>
+          <div class="chip"><i class="fas fa-book"></i> Storytelling</div>
+          <div class="chip"><i class="fas fa-lightbulb"></i> Creativity</div>
+        </div>
+      </section>
+    </section>
+
+      <!-- Google Drive Section -->
+      <section id="drive-container">
+        <h2 class="drive-title"><i class="fa-brands fa-google-drive"></i> My Google Drive</h2><br><br>
+        <p class="about">
+          Access my shared documents, project files, and resources directly from Google Drive.
+        </p><br>
+        <a href="https://drive.google.com/drive/folders/1-DCUuAE-oYSPJsADUjdbi5zG770r8tut?usp=sharing" 
+          target="_blank" 
+          class="drive-btn">
+          <i class="fa-solid fa-cloud-arrow-down"></i> Open Google Drive
+        </a>
+      </section>
+       
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <p>Interested in working together? Reach out to me below:</p>
+        <div class="socials">
+          <a href="https://mail.google.com/mail/?view=cm&to=kaviarasu6380@gmail.com&su=Hello&body=Type%20your%20message%20here" target="_blank">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          <a href="https://www.linkedin.com/in/kaviarasu-k-a8a253330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://t.me/Gamerkavi" target="_blank">
+            <i class="fab fa-telegram"></i> Telegram
+          </a>
+          <a href="https://www.instagram.com/kaviarasu8691?igsh=MXJ5NjZjN3I2dnJxZQ==" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Built with &#x2764;&#xFE0F; © 2025 Kaviarasu K — Video Editor.
+    </footer>
+
+    <div class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
