@@ -94,22 +94,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ---------------- Inline Thumbnail → Video Play ---------------- */
   const thumbnails = document.querySelectorAll(".video-thumbnail");
+
   thumbnails.forEach(thumbnail => {
     thumbnail.addEventListener("click", () => {
       const videoUrl = thumbnail.dataset.video;
       if (!videoUrl) return;
+
+      // Create iframe
       const iframe = document.createElement("iframe");
-      iframe.src = `${videoUrl}?autoplay=1&mute=1`;
+      iframe.src = `${videoUrl}?autoplay=1&mute=1`; // autoplay + mute
       iframe.width = "100%";
-      iframe.height = "100%";
-      iframe.style.border = "none";
+      iframe.height = "250"; // fixed height for consistent layout
+      iframe.style.border = "0";
+      iframe.style.display = "block";
       iframe.allow = "autoplay; encrypted-media";
-      iframe.allowFullscreen = true;
+      iframe.setAttribute("allowfullscreen", "");
+
+      // Replace thumbnail content with iframe
       thumbnail.innerHTML = "";
       thumbnail.appendChild(iframe);
     });
   });
-
   /* ---------------- Open email link automatically ---------------- */
   const link = document.getElementById('openEmail');
   if (link) link.click();
@@ -189,17 +194,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
    });
 });
-
-  document.querySelectorAll(".video-thumbnail").forEach(thumbnail => {
-    thumbnail.addEventListener("click", () => {
-      const videoUrl = thumbnail.dataset.video;
-      thumbnail.innerHTML = `
-        <video autoplay muted loop controls width="100%" height="200" style="display:block;">
-          <source src="${videoUrl}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>`;
-    });
-  });
 
 
 
