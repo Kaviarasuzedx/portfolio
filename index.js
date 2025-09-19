@@ -190,6 +190,16 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 });
 
+  document.querySelectorAll(".video-thumbnail").forEach(thumbnail => {
+    thumbnail.addEventListener("click", () => {
+      const videoUrl = thumbnail.dataset.video;
+      thumbnail.innerHTML = `
+        <video autoplay muted loop controls width="100%" height="200" style="display:block;">
+          <source src="${videoUrl}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>`;
+    });
+  });
 
 
 
