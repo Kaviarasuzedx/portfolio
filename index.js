@@ -189,15 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
    });
 });
-  document.querySelectorAll(".video-thumbnail").forEach(thumbnail => {
-    thumbnail.addEventListener("click", () => {
-      const videoUrl = thumbnail.dataset.video;
-      thumbnail.innerHTML = `
-        <iframe src="${videoUrl}" width="100%" height="200"
-          style="border:0; display:block;" 
-          allow="autoplay" loading="lazy"></iframe>`;
-    });
-  });
+
 
 
 
