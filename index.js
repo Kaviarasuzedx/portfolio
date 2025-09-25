@@ -93,28 +93,56 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ---------------- Inline Thumbnail → Video Play ---------------- */
-  const thumbnails = document.querySelectorAll(".video-thumbnail");
+(function loadYouTubeAPIOnce(){
+  if (window.YT && window.YT.Player) return;
+  const tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
+})();
 
-  thumbnails.forEach(thumbnail => {
-    thumbnail.addEventListener("click", () => {
-      const videoUrl = thumbnail.dataset.video;
-      if (!videoUrl) return;
+document.querySelectorAll('.video-thumbnail').forEach(thumbnail => {
+  thumbnail.addEventListener('click', function () {
+    const id = this.dataset.videoId;
+    if (!id) return;
 
-      // Create iframe
-      const iframe = document.createElement("iframe");
-      iframe.src = `${videoUrl}?autoplay=1&mute=1`; // autoplay + mute
-      iframe.width = "100%";
-      iframe.height = "250"; // fixed height for consistent layout
-      iframe.style.border = "0";
-      iframe.style.display = "block";
-      iframe.allow = "autoplay; encrypted-media";
-      iframe.setAttribute("allowfullscreen", "");
+    // create a div for the player
+    const playerId = 'ytplayer-' + id + '-' + Math.floor(Math.random()*10000);
+    this.innerHTML = `<div id="${playerId}"></div>`;
 
-      // Replace thumbnail content with iframe
-      thumbnail.innerHTML = "";
-      thumbnail.appendChild(iframe);
-    });
+    // wait for the API to be ready (if not ready yet)
+    function createWhenReady() {
+      if (window.YT && window.YT.Player) {
+        new YT.Player(playerId, {
+          height: '200',
+          width: '100%',
+          videoId: id,
+          playerVars: {
+            autoplay: 1,
+            mute: 1,
+            rel: 0,
+            modestbranding: 1,
+            loop: 1,
+            playlist: id
+          },
+          events: {
+            onReady: function (e) { e.target.playVideo(); },
+            onStateChange: function (e) {
+              // fallback loop handler
+              if (e.data === YT.PlayerState.ENDED) {
+                e.target.seekTo(0);
+                e.target.playVideo();
+              }
+            }
+          }
+        });
+      } else {
+        setTimeout(createWhenReady, 150);
+      }
+    }
+    createWhenReady();
   });
+});
+
   /* ---------------- Open email link automatically ---------------- */
   const link = document.getElementById('openEmail');
   if (link) link.click();
@@ -194,7 +222,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
    });
 });
-
 
 
 
